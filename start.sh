@@ -14,8 +14,7 @@ if [ "$film_odp" == "T" ] || [ "$film_odp" == "t" ]; then
 
 
     if [ "$serwer_wybor" == "A" ] || [ "$serwer_wybor" == "a" ]; then
-
-       
+      
 
         echo "Instalacja serwera Apache."												# Instalacja Apache w przypadku wyboru 
 
@@ -31,12 +30,9 @@ if [ "$film_odp" == "T" ] || [ "$film_odp" == "t" ]; then
 
 
 
-
-
     elif [ "$serwer_wybor" == "B" ] || [ "$serwer_wybor" == "b" ]; then
 
 																	# Instalacja Nginx w przypadku wyboru
-
         echo "Instalacja serwera Nginx"
 
         sudo apt update
@@ -44,8 +40,6 @@ if [ "$film_odp" == "T" ] || [ "$film_odp" == "t" ]; then
         sudo apt install nginx
 
         echo "Serwer Nginx został pomyslnie zainstalowany."
-
-
 
     else
 
@@ -55,10 +49,7 @@ if [ "$film_odp" == "T" ] || [ "$film_odp" == "t" ]; then
 
     fi
 
-
-
 																	# Przechodzimy do folderu gdzie będziemy instalować DVWA
-
 
     cd /var/www/html
 
@@ -67,12 +58,9 @@ if [ "$film_odp" == "T" ] || [ "$film_odp" == "t" ]; then
     git clone https://github.com/digininja/DVWA.git
 
 
-
     echo "Zmiana nazwy folderu"														# Dla bezpieczeństwa i lepszego działania zmieniamy nazwę folderu
 
     mv DVWA dvwa
-
-
 
 
     echo "Wykonuję: chmod -R 777 dvwa/"													# Dodajemy uprawnienia
@@ -99,12 +87,10 @@ if [ "$film_odp" == "T" ] || [ "$film_odp" == "t" ]; then
 sleep 25
 
 
-
 else
 
-    echo "Pan prowadzący polecił zapoznać się z filmem \"Chłopaki nie płaczą\", więc proszę to zrobić przed resztą projektu :)"
+    echo "Pan prowadzący polecił zapoznać się z filmem "Chłopaki nie płaczą", więc proszę to zrobić przed resztą projektu :)"
 
     exit 1
 
 fi
-
