@@ -1,7 +1,5 @@
 #!/bin/bash
 
-
-
 echo "Zaczynamy to co misie lubią najbardziej. Trzeba natomiast tutaj pamiętać, że takie testy możemy wykonywać jedynie za zgodą. Inaczej można skończć jak taki człowiek z "miasta", niejaki Radosław Psikuta bez S na końcu :)"
 
 sleep 30
@@ -9,20 +7,13 @@ sleep 30
 sudo apt update
 
 
-
-
 sudo apt install hydra												# Instalacja narzędzia do przeprowadzania ataku.
-
 
 
 echo "Instalacja hydry zakończona"
 
 
-
-
-
 dvwa_url="http://127.0.0.1/dvwa/security.php"
-
 
 
 														# Tutaj poszliśmy na ręczne dane, bo będzie się to u każdego różnić 
@@ -49,7 +40,6 @@ for i in {1..5}; do
     logins+=("$login")
 
 
-
     														#Tutaj kodujemy dane do logowania (poprawne) i dodajemy do wyboru użytkownika
     login_with_admin="${login}admin"
 
@@ -60,8 +50,6 @@ for i in {1..5}; do
     read -p "Podaj hasło $i: " password
 
     passwords+=("$password")
-
-
 
  														# Analogicznie do hasła
 
@@ -89,7 +77,6 @@ sleep 30
 
 
 read -p "Proszę wprowadzić wartość z pliku cookie PHP (PHPSESSID): " php_session_id
-
 
 
 echo "Pobrane dane : PHPSESSID=$php_session_id"
